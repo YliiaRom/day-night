@@ -1,0 +1,15 @@
+@import "./variables.scss";
+ol,
+ul {
+	list-style-type: none;
+}
+.header-list {
+	color: $color-acсent;
+	background-color: $text;
+	padding: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}

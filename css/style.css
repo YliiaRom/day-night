@@ -1,0 +1,79 @@
+.light {
+  background-color: rgb(251, 250, 248);
+}
+
+.dark {
+  background-color: #260d01;
+}
+
+body.dark p {
+  color: #faf8f8;
+}
+
+.theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.theme p {
+  font-size: 24px;
+  color: #736c6c;
+}
+.theme .label-theme {
+  position: relative;
+  height: 20px;
+  width: 50px;
+  padding: 5px;
+}
+.theme .label-theme .slider {
+  position: absolute;
+  inset: 0;
+  background-color: #620b0b;
+  cursor: pointer;
+}
+.theme .label-theme .round {
+  border-radius: 20px;
+}
+.theme .label-theme .round:before {
+  border-radius: 50%;
+  border: 1px solid #faf8f8;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.input-theme:checked + .slider {
+  background: -webkit-gradient(linear, left bottom, left top, from(#444444), to(#cb9a9a));
+  background: linear-gradient(0deg, #444444 0%, #cb9a9a 100%);
+}
+
+.input-theme:checked + .slider::before {
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+          transform: translateX(-30px);
+  border: 1px solid #faf8f8;
+  background: linear-gradient(295deg, #e2d3c6 20%, rgb(33, 15, 0) 90%);
+  -webkit-box-shadow: inset 2px 2px 5px #f3f1ee, inset -2px -2px 6px #1f0101, 0 0 15px 0 hsl(240, 12%, 97%);
+          box-shadow: inset 2px 2px 5px #f3f1ee, inset -2px -2px 6px #1f0101, 0 0 15px 0 hsl(240, 12%, 97%);
+}
+
+.header-list {
+  background-color: #736c6c;
+  padding: 50px;
+}
