@@ -7,7 +7,7 @@
     <title>gallery</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+  <body class="light">
     <header class="header">
       <div class="container">
       </div>
@@ -15,31 +15,21 @@
     
 
     <main>
-      <section class="spawner">
-        <h1 class="title-gallery" data-text3d="">Creating a Gallery</h1>
-      
-          <div class="gallery_container">
-            <form class="form" action="#">
-              <input 
-              class="input js-input"
-              name="text"
-              type="text"
-              placeholder="Search images...">
-              <button class="btn js-btn" type="submit">Search</button>
-            </form>
-            <p class="sub-title">only English words.</p>
-            <ul class="gallery-list">
-            </ul>
-            <button class="btn-load js-hidden" type="submit">Load more</button>
-          </div>
-  
-       <div class="smoke" id="smoke"></div>
-      </section>
+     <div class="theme">
+      <p>Dark</p>
+      <label class="label-theme">
+        <input 
+        class="input-theme"
+        type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <p>light</p>
+     </div>
 
     </main>
 
 
 <!-- <script type="module" src="./js/pixabay-api.js"></script> -->
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
