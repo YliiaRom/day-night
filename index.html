@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gallery</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script type="module" crossorigin src="/day-night/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/day-night/assets/index-Dt64E-vo.css">
+    <link rel="modulepreload" crossorigin href="/day-night/assets/vendor-CXPryBAE.js">
+    <link rel="stylesheet" crossorigin href="/day-night/assets/vendor-Be9b3THL.css">
+    <link rel="stylesheet" crossorigin href="/day-night/assets/index-CLqT1hMB.css">
   </head>
   <body class="light">
     <header class="header">
@@ -47,9 +55,1057 @@
 </div>
 
 </section>
-    </main>
+      <section class="huly">
+  <div class="huly-conteiner">
 
+  </div>
+</section>
+      <section class="btn-woter">
+  <div class="btn-woter_container">
+    <h2>Romanenko Yuliia</h2>
+    <div class="mainBox">
+      <a href="#" class="woter-btn_link-box"
+        ><div class="btn-woter_body" id="woter">
+          <span>Woter</span>
+        </div></a
+      >
+      <span class="textSpan02">Button</span>
+    </div>
+
+    <svg id="svgWoterBox">
+      <filter id="svgFilter">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+        <feColorMatrix
+          values="
+              1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 50 -10"
+        />
+      </filter>
+    </svg>
+    <!-- -----------woter02 -->
+    <div class="woter02-wrapper">
+      <a href="#" class="btn-woter02_link">
+        <div class="woter02-box" id="woter02"><span>Woter 02</span></div>
+      </a>
+    </div>
+    <!-- filter-->
+  </div>
+  <div class="btn-woter_container01">
+    <p>a>div>span</p>
+    <div>
+      <!-- practic  woter03-->
+      <h3>woter 03 (create-50 / remove-3000 // stdDeviation="7")</h3>
+      <a href="#" class="woter-03__box">
+        <div id="woter03"><span> button 03 </span></div>
+        <button class="woter-03__text">button 03</button>
+      </a>
+    </div>
+    <!-- filter woter03-->
+    <svg>
+      <filter id="filterWoter03">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" />
+        <feColorMatrix
+          values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 50 -10"
+        />
+      </filter>
+    </svg>
+    <!-- filter woter05-->
+    <div>
+      <h3>#05 (create-700 / remove-2000 // stdDeviation="13")</h3>
+      <p>background-color: #f19410;//#c8b8b8;</p>
+      <h4>Romanenko Yuliia</h4>
+      <a href="#" class="woter05__box">
+        <div id="woter05"></div>
+        <span>button-05</span>
+
+        <svg>
+          <filter id="filter05">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="13" />
+            <feColorMatrix
+              values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 50 -10"
+            />
+          </filter>
+        </svg>
+      </a>
+    </div>
+    <!-- filter woter06-->
+    <div>
+      <h3>
+        #05 (create-2000 / remove-5000 // stdDeviation="11"//animation: 6s)
+      </h3>
+      <a href="#" class="woter06__wrapper">
+        <div id="woter06">ffffffff</div>
+        <span>button #6</span>
+      </a>
+      <!-- svg06-->
+      <svg>
+        <filter id="filter06">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+          <feColorMatrix
+            values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 50 -10"
+          />
+        </filter>
+      </svg>
+    </div>
+  </div>
+  <svg>
+    <filter id="filterWoter02">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+      <feColorMatrix
+        values="
+               1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 40 -10"
+      />
+    </filter>
+  </svg>
+  <script>
+    let woter = document.getElementById('woter');
+
+    function createParticles() {
+      let particle = document.createElement('div');
+      particle.classList.add('particle');
+      //Math.random()- повертає випадкове число від 0 (включно) до 1 (виключно)
+      //  Math.PI приблизно дорівнює 3.14159
+      // 2 * Math.PI — це повне коло в радіанах, тобто 360 градусів.
+      let angle = Math.random() * 2 * Math.PI;
+      // Math.random() * 2 * Math.PI генерує випадкове число від 0 до 2π, тобто випадковий кут у радіанах десь всередині повного кола.
+      //       2.------------------------------------- Math.random() * 100
+      // Множимо випадкове число на 100 → отримуємо число від 0 до 99.999….
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.setProperty('--dx', dx);
+      particle.style.setProperty('--dy', dy);
+
+      particle.style.left = '50%';
+      particle.style.top = '50%';
+      particle.style.transform = 'translate(-50%, -50%)';
+
+      woter.appendChild(particle);
+      setTimeout(() => {
+        particle.remove();
+      }, 2000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles();
+      }
+    }, 700);
+    //-------------------- woter 02
+    const woter02 = document.getElementById('woter02');
+
+    function createParticles02() {
+      const particles02 = document.createElement('div');
+
+      particles02.classList.add('particle02');
+
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+      let dxq = Math.cos(angle) * distance + 'px';
+      let dyq = Math.sin(angle) * distance + 'px';
+
+      particles02.style.position = 'absolute';
+
+      particles02.style.left = '50%';
+      particles02.style.top = '50%';
+      particles02.style.transform = 'translate(-50%, -50%)';
+      particles02.style.setProperty('--dxq', dxq);
+      particles02.style.setProperty('--dyq', dyq);
+
+      particles02.style.animation = 'go  3s linear forwards';
+
+      woter02.appendChild(particles02);
+      setTimeout(() => {
+        particles02.remove();
+      }, 2000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles02();
+      }
+    }, 100);
+    //-------------------- woter 03
+    const woter03 = document.getElementById('woter03');
+
+    function createParticles03() {
+      const particle03 = document.createElement('div');
+      particle03.classList.add('particle03');
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle03.style.setProperty('--w3x', dx);
+      particle03.style.setProperty('--w3y', dy);
+
+      particle03.style.left = '50%';
+      particle03.style.top = '50%';
+
+      woter03.appendChild(particle03);
+      setTimeout(() => {
+        particle03.remove();
+      }, 3000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles03();
+      }
+    }, 50);
+    //--------woter05
+    const woter05 = document.getElementById('woter05');
+
+    function createParticles05() {
+      let particle = document.createElement('div');
+      particle.classList.add('particle05');
+
+      //--
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.top = '50%';
+      particle.style.left = '50%';
+
+      particle.style.setProperty('--wdx', dx);
+      particle.style.setProperty('--wdy', dy);
+
+      woter05.appendChild(particle);
+      setTimeout(() => {
+        particle.remove();
+      }, 2000);
+    }
+    //--
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles05();
+      }
+    }, 700);
+    //--------woter06
+    const woter06 = document.getElementById('woter06');
+
+    function createParticles06() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle06');
+
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.setProperty('--dx06', dx);
+      particle.style.setProperty('--dy06', dy);
+
+      woter06.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 5000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 5; i++) {
+        createParticles06();
+      }
+    }, 2000);
+  </script>
+</section>
+<!--
+<section class="btn-woter">
+  <div class="btn-woter_container">
+    <h2>btn-woter</h2>
+    <a href="#" class="woter-btn_link-box">
+      <div class="btn-woter_body" id="woter">
+        <span>Woter</span>
+      </div>
+    </a>
+  </div>
+  <div class="btn-woter_container01"><p>a>div>span</p></div>
+  <script>
+    let woter = document.getElementById('woter');
+
+    function createParticles() {
+      let particles = document.createElement('div');
+      particles.classList.add('particles');
+
+      // Случайный угол и расстояние
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      // Позиционирование частицы в центре блока woter
+      particles.style.position = 'absolute';
+      particles.style.left = '50%';
+      particles.style.top = '50%';
+      particles.style.transform = 'translate(-50%, -50%)';
+
+      // Применение случайного движения
+      particles.style.animation = `moveParticle 2s forwards`;
+
+      // Добавление частицы в блок woter
+      woter.appendChild(particles);
+
+      // Удаление частицы через 2 секунды после анимации
+      setTimeout(() => {
+        particles.remove();
+      }, 2000);
+    }
+
+    // Анимация (движение частицы наружу)
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes moveParticle {
+        0% { transform: translate(-50%, -50%); }
+        100% { transform: translate(${dx}, ${dy}); }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Запуск создания частиц каждые 100 мс
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles();
+      }
+    }, 100);
+  </script>
+</section> -->
+
+      <section class="tilt">
+  <div>
+    <h2>Tilt</h2>
+    <p>Card= transform-style: preserve-3d;</p>
+    <p>
+      card.style.transform = `perspective(1000px)rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)`;
+    </p>
+    <div class="tilt__wrapper">
+      <div class="tilt__01">
+        <div class="tilt-01__card">
+          <img
+            class="tilt-img"
+            src="../img/portfolio-collage/first-screen1.webp"
+            alt="picture"
+          />
+        </div>
+        <p>background-position: center;</p>
+        <p>
+          js = let bgX = (x / rect.width) * 50 + 50; <br />
+          card.style.backgroundPositionX = `${bgX}%`;
+        </p>
+        <p>card.style.backgroundPositionX = ``;</p>
+        <p>
+          background-position: center; <br />
+          background-size: cover;
+        </p>
+      </div>
+      <!-- ----------------tilt#2 -->
+      <div class="tilt02_wrap">
+        <div class="tilt-02">
+          <img
+            class="tilt-02_img"
+            src="../img/portfolio-collage/rectangle5.webp"
+            alt="picture"
+          />
+        </div>
+      </div>
+      <!-- ----------------tilt#3 -->
+      <div class="tilt03">
+        <div class="tilt03_box">
+          <img src="../img/logo.svg" alt="pictures" class="tilt03_img" />
+        </div>
+
+        <div class="tilt03_btn-wrapper">
+          <h3>
+            animation: 8s/ stdDeviation="10" ; setInterval: 3000 / remove: 5000/
+          </h3>
+          <a href="#" id="tilt03_btn-body">
+            <div class="tilt03_btn" id="tilt03btn"></div>
+            <span class="tilt03_btn-text">button -tilt#3</span>
+          </a>
+          <!-- svg --#3-->
+          <svg>
+            <filter id="filter03">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+              <feColorMatrix
+                values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 50 -10"
+              />
+            </filter>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //--#1
+    let card = document.querySelector('.tilt-01__card');
+    card.addEventListener('mousemove', e => {
+      let rect = card.getBoundingClientRect();
+
+      // .getBoundingClientRect() повертає об`єкт, що містить розміри елемента/ його положення відносно вікна перегляду, тобто що бачить користувач у браузер
+      //       rect.top — відстань від верхнього краю вікна до верхнього краю елемента.
+
+      // rect.left — відстань від лівого краю вікна до лівого краю елемента.
+
+      // rect.right — відстань від лівого краю вікна до правого краю елемента.
+
+      // rect.bottom — відстань від верхнього краю вікна до нижнього краю елемента.
+
+      // rect.width — ширина елемента.
+
+      // rect.height — висота елемента.
+      let x = e.clientX - rect.left - rect.width / 2;
+      //на скільки пікселів курсор зміщений від центру елемента по осі X.
+      //--------------------------------
+      //e.clientX-координата X миші відносно вікна браузера.
+      //--
+      //e.clientX - rect.left- наскільки вправо від лівого краю елемента знаходиться курсор.
+      //--
+      //rect.width / 2-половина ширини елемента
+      //обчислити позицію відносно центру елемента, а не його лівого краю.
+      //===============================
+      //       Якщо x буде:
+      // від'ємне → курсор лівіше центру,
+      // додатне → правіше центру.
+
+      let y = e.clientY - rect.top - rect.height / 2;
+      //e.clientY - rect.top — позиція курсора всередині елемента по вертикалі.
+
+      //--------------------------------
+      //наклоняет  //влево/вправо.
+      // let rotateX = (y / (rect.width / 2)) * -30;
+      //наклоняет  /вверх ніз
+      //let rotateY = (x / (rect.height / 2)) * 30;
+      //-
+      // let rotateX = (y / rect.height) * -30;
+      // rotateX — це нахил вгору/вниз, тому його потрібно обчислювати відносно Y (вертикаль).
+      // let rotateY = (x / rect.width) * 30;
+
+      let rotateX = (x / rect.height) * -30;
+      //(x / rect.height) — это нормализация значения, т.е. деление положения мыши по оси X на высоту элемента. Это дает значение от 0 до 1, в зависимости от того, где на элементе находится мышь.
+      // влево/вправо.
+      //Умножаем на -30, чтобы повернуть элемент по оси X на максимальные углы от -30 до 30 градусов, когда мышь находится на одном из краев (вверх или вниз)
+      let rotateY = (y / rect.width) * -30;
+
+      //-30 -максимальные углы поворота./чтобы получить величину поворота.
+      //-30? Чтобы при движении мышки вправо элемент поворачивался влево (эффект наклона).
+      //width / 2, чтобы x = 0 (центр) давал 0 градусов, а края — ±30.
+      //---------------------------
+      card.style.transform = `perspective(1000px)rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      //---------------------------
+      let bgX = (x / rect.width) * 50 + 50;
+      card.style.backgroundPositionX = `${bgX}%`;
+      //и умножаем на 50, чтобы диапазон значения был от 0 до 50
+      //Добавляем 50, чтобы это значение лежало в пределах от 50 до 100.
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = `perspective(1000px)rotateX(0deg) rotateY(0deg)`;
+      card.style.backgroundPositionX = ``;
+      // фоновое изображение больше не будет двигаться по оси X, и его положение будет сброшено в исходное состояние.
+    });
+    //--#2
+    const card02 = document.querySelector('.tilt-02');
+    card02.addEventListener('mousemove', e => {
+      let rect = card02.getBoundingClientRect();
+      let x = e.clientX - rect.left - rect.width / 2;
+      let y = e.clientY - rect.top - rect.height / 2;
+      //--
+      let rotateX = (y / (rect.width / 2)) * 30;
+      let rotateY = (x / (rect.height / 2)) * -30;
+      //--frm
+      card02.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(50px)`;
+      let bgX = (x / rect.width) * 50 + 50;
+      card02.style.backgroundPositionX = `${bgX}%`;
+    });
+
+    card02.addEventListener('mouseleave', () => {
+      card02.style.transform = `rotateX(0deg) rotateY(0deg) translateZ(100px)`;
+    });
+    // ----------#3
+    const card03 = document.querySelector('.tilt03_box');
+
+    card03.addEventListener('mousemove', e => {
+      const rect = card03.getBoundingClientRect();
+
+      let x = e.clientX - rect.left - rect.width / 2;
+      let y = e.clientY - rect.top - rect.height / 2;
+
+      let rotateX = (y / (rect.width / 2)) * 30;
+      let rotateY = (x / (rect.height / 2)) * -30;
+
+      card03.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+      let bgX = (x / rect.width) * 50 + 50;
+      card03.style.backgroundPosition = `${bgX}%`;
+    });
+    card03.addEventListener('mouseleave', () => {
+      card03.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+      card03.style.backgroundPosition = ``;
+    });
+    //---btn#3
+    const tiltBtn03 = document.getElementById('tilt03btn');
+
+    function createParticles() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle03');
+
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.setProperty('--dx03', dx);
+      particle.style.setProperty('--dy03', dy);
+
+      tiltBtn03.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 5000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 2; i++) {
+        createParticles();
+      }
+    }, 3000);
+  </script>
+</section>
+
+      <section class="benefits">
+  <div class="benefits-container">
+    <h2 class="benefits-title -icon-eye">Benefits of working with me</h2>
+    <div class="benefits-components">
+      <ul class="benefits-list">
+<!--  card -->
+      <li class="benefits-item">
+        <div class="benefits-icon-container">
+          <svg class="benefits__item-icon" width="" height="">
+            <use href="#"></use>
+          </svg>
+        </div>
+
+        <h3 class="benefits-item-title">Expertise</h3>
+
+        <div class="benefits-item-text">
+          <p>As a highly experienced developer, I have deep knowledge of programming and website development.</p>
+         
+        </div>
+      </li>
+
+      <!-- --/card -->
+      <li class="benefits-item">
+        <div class="benefits-icon-container">
+          <svg class="" width="" height="">
+            <use href="#"></use>
+          </svg>
+        </div>
+
+        <h3 class="benefits-item-title">Communication</h3>
+
+        <div class="benefits-item-text">
+          <p> Understanding your needs and wants is my priority and I am always open to discussions and corrections.</p>
+        </div>
+      </li>
+
+      <li class="benefits-item">
+        <div class="benefits-icon-container">
+          <svg class="" width="" height="">
+            <use href="#"></use>
+          </svg>
+        </div>
+
+        <h3 class="benefits-item-title">Art</h3>
+
+        <div class="benefits-item-text">
+          <p>Thanks to my creative nature, I am ready to accept challenges and help you bring your ideas to life. </p>
+        </div>
+      </li>
+
+      <!-- ark -->
+      <li class="benefits-item">
+        <div class="benefits-icon-container">
+          <svg class="" width="" height="">
+            <use href="#"></use>
+          </svg>
+        </div>
+
+        <h3 class="benefits-item-title">Urgent execution</h3>
+
+        <div class="benefits-item-text">
+          <p>I understand how important time is to you. Ready to work quickly and efficiently, without reducing the quality of work.</p>
+        </div>
+      </li>
+      </ul>
+
+      <div class="benefits-btn__container">
+        <a class="benefits-btn" href="#">Order the project</a>
+        <p class="bg-effect"></p>
+      </div>
+
+     
+    </div>
+
+  </div>
+</section> 
+
+
+      <!-- <div class="spline-box">
+  <div>
+    <spline-viewer
+      id="theeD"
+      url="https://prod.spline.design/BIWelo40pWGbmhKE/scene.splinecode"
+    ></spline-viewer>
+  </div>
+  <div>Romanenko Yuliia</div>
+  <p>spline.html</p>
+  <spline-viewer
+    id="theeS"
+    url="https://prod.spline.design/s2gYi5LkRVmxNt9i/scene.splinecode"
+  ></spline-viewer>
+</div>
+ -->
+      <section class="form-tree">
+  <form action="#" class="form-tree__form01 form01">
+    <h2 class="form-tree__form01__title">clip-path: polygon(0 0, 100% 0%, 91% 100%, 0% 100%);</h2>
+    <p> border-right: 2Xpx solid #xxx;
+  </p>
+  <p> 
+   border-left: Xpx solid transparent;</p>
+    <input
+    class="form01__input" 
+    type="input"
+    placeholder="input text"
+    >
+    <button class="form01__btn-submit">submit #ff4601</button>
+  </form>
+</section>
+      <section class="avatar">
+  <div class="avatar-container">
+    <h2 class="avatar-title">Avatar</h2>
+    <p>avatar.box>.avatar-left+.avatar-right>.avatar-content</p>
+    <p>
+      .avatar-left, <br />
+      .avatar-right {<br />
+      width: 100%; <br />
+      height: 100%; <br />
+      border: 1px solid #c2bebe; <br />
+      background-image: url(../img/avatar/romanenkoyuliia.png); <br />
+      block-size: 100%; <br />
+      background-repeat: no-repeat; <br />
+      background-position: center; <br />
+      }
+    </p>
+
+    <div class="avatar-box">
+      <div class="avatar-left"></div>
+      <div class="avatar-right">
+        <div class="avatar-content">
+          clip-path: polygon(0 0, 60% 0, 65% 100%, 0 100%); background-image:
+          url(../img/xxx.png); background-size: 100%
+        </div>
+      </div>
+    </div>
+    <p>
+      .avatar-left { <br />
+      clip-path: polygon(0 0, 60% 0, 60% 100%, 0 100%); <br />
+      }
+    </p>
+    <p>
+      .avatar-right .avatar-content { <br />
+      width: 40%; <br />
+      }
+    </p>
+    <p>
+      .avatar-right { <br />
+      display: flex; <br />
+      justify-content: right; <br />
+      align-items:center; <br />
+      font-weight: 900; <br />
+      font-size: 40px; <br />
+      line-height: 37px; <br />
+      text-transform:uppercase; <br />
+      -webkit-background-clip: text; <br />
+      color:transparent; } <br />
+    </p>
+    <p>.avatar-left, .avatar-right { position: absolute; left: 0; }</p>
+    <div class="linkedin">
+      <div class="avatar-box">
+        <div class="avatar-left"></div>
+        <div class="avatar-right">
+          <div class="avatar-content">css html js react jsx</div>
+        </div>
+      </div>
+      <div class="linkedin-accent"></div>
+      <!-- <div class="linkedin-accent little"></div> -->
+      <div class="linkedin-box">
+        <div class="linkedin-right"></div>
+        <div class="linkedin-left">
+          <p class="linkedin-text">
+            cdnjs <br />
+            clsx <br />
+            vercel <br />
+            axios <br />
+            day.js <br />date-fns <br />izitoast <br />
+            flatpickr <br />basiclightbox jsonplaceholder <br />
+            lodash <br />
+            gsap
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- <section class="section-base covers" id="covers">
+  <h2 class=".visually-hidden -icon-clock">Portfolio my project</h2>
+      <div class="covers-container">
+        <ul class="covers-list">
+    
+    
+          <li class="covers-item">
+           
+              <picture class="covers-picture">
+                <source srcset="/images/covers/chego.webp 1x, /images/covers/chego@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/chego.jpg" alt="website banner about beauty with a girl's face">
+              </picture>
+          
+    
+            
+              <picture class="covers-picture">
+                <source srcset="/images/covers/energi-flow.webp 1x, /images/covers/energi-flow@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/energy-flow.jpg" alt="банер сайта про спорт с спортивной фигурой девушки">
+              </picture>
+           
+    
+           
+              <picture class="covers-picture">
+                <source srcset="/images/covers/english-excelence.webp 1x, /images/covers/english-excelence@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/english.jpg" alt="
+                home page of an English learning website with a girl in headphones">
+              </picture>
+        
+    
+              <picture class="covers-picture">
+                <source srcset="/images/covers/fruit-box.webp 1x, /images/covers/fruit-box@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/fruit-box.jpg" alt="
+                website banner with oranges">
+              </picture>
+        
+            
+    
+              <picture class="covers-picture">
+                <source srcset="/images/covers/green-harvest.webp 1x, /images/covers/green-harvest@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/green-harvest.jpg" alt="website banner with vegetables">
+              </picture>
+           
+    
+          </li>
+    
+          <li class="covers-item">
+       
+              <picture class="covers-picture">
+                <source srcset="/images/covers/mimino.webp 1x, /images/covers/mimino@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/mimino.jpg" alt="hotel website banner with house">
+              </picture>
+          
+    
+        
+              <picture class="covers-picture">
+                <source srcset="/images/covers/power-pulse.webp 1x, /images/covers/power-pulse@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/power-pulse.jpg" alt="sports website banner with a girl in sportswear">
+              </picture>
+           
+    
+        
+              <picture class="covers-picture">
+                <source srcset="/images/covers/wallet.webp 1x, /images/covers/wallet@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/wallet.jpg" alt="
+                website banner with a girl who smiles and a guy who holds a bank card near a laptop">
+              </picture>
+           
+    
+         
+              <picture class="covers-picture">
+                <source srcset="/images/covers/ukrainian.webp 1x, /images/covers/ukrainian@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/ukrainian.jpg" alt="website banner with a girl in Ukrainian clothes">
+              </picture>
+        
+    
+    
+              <picture class="covers-picture">
+                <source srcset="/images/covers/wallet.webp 1x, /images/covers/wallet@2x.webp 2x">
+                <img src="/images/covers/covers-jpeg/wallet.jpg" alt="
+                website banner with a girl who smiles and a guy who holds a bank card near a laptop">
+              </picture>
+           
+            
+          </li>
+    
+          <li class="covers-item shine-line">
+            
+            <picture class="covers-picture">
+              <source srcset="/images/covers/english-excelence.webp 1x, /images/covers/english-excelence@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/english.jpg" alt="
+              home page of an English learning website with a girl in headphones">
+            </picture>
+         
+    
+            
+            <picture class="covers-picture">
+              <source srcset="/images/covers/wallet.webp 1x, /images/covers/wallet@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/wallet.jpg" alt="
+              website banner with a girl who smiles and a guy who holds a bank card near a laptop">
+            </picture>
+        
+
+            <picture class="covers-picture">
+              <source srcset="/images/covers/chego.webp 1x, /images/covers/chego@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/chego.jpg" alt="website banner about beauty with a girl's face">
+            </picture>
+            
+
+           
+            <picture class="covers-picture">
+              <source srcset="/images/covers/english-excelence.webp 1x, /images/covers/english-excelence@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/english.jpg" alt="
+              home page of an English learning website with a girl in headphones">
+            </picture>
+        
+      
+        
+
+            <picture class="covers-picture">
+              <source srcset="/images/covers/energi-flow.webp 1x, /images/covers/energi-flow@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/energy-flow.jpg" alt="банер сайта про спорт с спортивной фигурой девушки">
+            </picture>
+ 
+          </li>
+    
+          <li class="covers-item">
+    
+    
+            <picture class="covers-picture">
+              <source srcset="/images/covers/fruit-box.webp 1x, /images/covers/fruit-box@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/fruit-box.jpg" alt="
+              website banner with oranges">
+            </picture>
+    
+          
+            <picture class="covers-picture">
+              <source srcset="/images/covers/mimino.webp 1x, /images/covers/mimino@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/mimino.jpg" alt="hotel website banner with house">
+            </picture>
+           
+    
+         
+            <picture class="covers-picture">
+              <source srcset="/images/covers/green-harvest.webp 1x, /images/covers/green-harvest@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/green-harvest.jpg" alt="website banner with vegetables">
+            </picture>
+        
+    
+    
+            <picture class="covers-picture">
+              <source srcset="/images/covers/ukrainian.webp 1x, /images/covers/ukrainian@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/ukrainian.jpg" alt="website banner with a girl in Ukrainian clothes">
+            </picture>
+            
+    
+            <picture class="covers-picture">
+              <source srcset="/images/covers/power-pulse.webp 1x, /images/covers/power-pulse@2x.webp 2x">
+              <img src="/images/covers/covers-jpeg/power-pulse.jpg" alt="sports website banner with a girl in sportswear">
+            </picture>
+         
+            
+          </li>
+    
+        </ul>
+      </div>
+</section> -->
+      <div class="conteiner-swiper">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="content-card">
+          <img
+            src="../img/portfolio-collage/first-screen1.webp"
+            alt="pictures"
+          />
+          <h2>font-size: clamp(2rem, 1vw, 3rem);</h2>
+          <p>aspect-ratio: 3/2;</p>
+
+          <button class="bnt-swiper02">
+            :is(:hover, :focus-visible) { transform: scale(0.97);}
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content-card">
+          <img src="../img/portfolio-collage/rectangle12.webp" alt="pictures" />
+          <h2>:HOVER</h2>
+          <p>
+            ...-wrapper:hover> :not(:hover) { transform: scale(0.7); opacity:
+            0.5; transition: transform 1s ease-in-out, opacity 300ms
+            ease-in-out; }
+          </p>
+          <p>
+            .content-card:hover { transform: scale(1); transition: transform 3s
+            ease-in-out, opacity 0.5s linear; }
+          </p>
+
+          <button class="bnt-swiper02">
+            :is(:hover, :focus-visible) { transform: scale(0.97);}
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content-card">
+          <img src="../img/portfolio-collage/rectangle5.webp" alt="pictures" />
+          <h2>grid-template-rows: 2fr 1fr 3fr 1fr;</h2>
+          <p>
+            .content-card { position: relative; <br />
+            display: grid; <br />
+            grid-auto-flow: dense; <br />
+            grid-template-rows: 2fr 1fr 3fr 1fr; }
+          </p>
+
+          <button class="bnt-swiper02">
+            .bnt-swiper02:is(:hover, :focus-visible) { transform: scale(0.97); }
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content-card">
+          <img src="../img/portfolio-collage/rectangle11.webp" alt="pictures" />
+          <h2>font-size: clamp(2rem, 1vw, 3rem);</h2>
+          <p>aspect-ratio: 3/2;.</p>
+
+          <button class="bnt-swiper02">
+            .bnt-swiper02:is(:hover, :focus-visible) { transform: scale(0.97); }
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content-card">
+          <img src="../img/portfolio-collage/rectangle6.webp" alt="pictures" />
+          <h2>font-size: clamp(2rem, 1vw, 3rem);</h2>
+          <p>aspect-ratio: 3/2;</p>
+
+          <button class="bnt-swiper02">
+            .bnt-swiper02:is(:hover, :focus-visible) { transform: scale(0.97); }
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content-card">
+          <img src="../img/portfolio-collage/rectangle8.webp" alt="pictures" />
+          <h2>font-size: clamp(2rem, 1vw, 3rem);</h2>
+          <p>aspect-ratio: 3/2;</p>
+
+          <button class="bnt-swiper02">
+            .bnt-swiper02:is(:hover, :focus-visible) { transform: scale(0.97); }
+          </button>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li class="prew">prew</li>
+      <li class="next">next</li>
+    </ul>
+  </div>
+</div>
+
+      <div class="about-me-swiper-container">
+  <div class="about-me-skills swiper my-thumbs">
+    <ul class="swiper-list swiper-wrapper">
+      <li class="swiper-slide swiper-content-wrap">
+        <p class="swipe-text">HTML</p>
+      </li>
+      <li class="swiper-slide swiper-content-wrap">
+        <p class="swipe-text">CSS</p>
+      </li>
+      <li class="swiper-slide swiper-content-wrap">
+        <p class="swipe-text">JavaScript</p>
+      </li>
+      <li class="swiper-slide swiper-content-wrap">
+        <p class="swipe-text">React</p>
+      </li>
+      <li class="swiper-slide swiper-content-wrap">
+        <p class="swipe-text">Node.js</p>
+      </li>
+      <li class="swiper-slide swiper-content-wrap">
+        <p class="swipe-text">React Native</p>
+      </li>
+      <li class="swiper-slide swiper-content-wrap">
+        <p class="swipe-text">Soft skills</p>
+      </li>
+    </ul>
+  </div>
+  <button class="swiper-arrow swiper-next" type="button">
+<span class="swiper-arrow-svn">button</span>
+
+  </button>
+</div>
+
+
+
+
+    </main>
+    <script
+      type="module"
+      src="https://my.spline.design/cubic-mc3chQnvmZKSyiPWr1vTulvu/"
+    ></script>
+    <!-- 3d cube -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.86/build/spline-viewer.js"
+    ></script>
+    <!-- btn- woter -->
+    <script></script>
+
+    <!-- /3d cube -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.86/build/spline-viewer.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script type="module" src="./js/pixabay-api.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
