@@ -1,0 +1,330 @@
+<section class="btn-woter">
+  <div class="btn-woter_container">
+    <h2>Romanenko Yuliia</h2>
+    <div class="mainBox">
+      <a href="#" class="woter-btn_link-box"
+        ><div class="btn-woter_body" id="woter">
+          <span>Woter</span>
+        </div></a
+      >
+      <span class="textSpan02">Button</span>
+    </div>
+
+    <svg id="svgWoterBox">
+      <filter id="svgFilter">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+        <feColorMatrix
+          values="
+              1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 50 -10"
+        />
+      </filter>
+    </svg>
+    <!-- -----------woter02 -->
+    <div class="woter02-wrapper">
+      <a href="#" class="btn-woter02_link">
+        <div class="woter02-box" id="woter02"><span>Woter 02</span></div>
+      </a>
+    </div>
+    <!-- filter-->
+  </div>
+  <div class="btn-woter_container01">
+    <p>a>div>span</p>
+    <div>
+      <!-- practic  woter03-->
+      <h3>woter 03 (create-50 / remove-3000 // stdDeviation="7")</h3>
+      <a href="#" class="woter-03__box">
+        <div id="woter03"><span> button 03 </span></div>
+        <button class="woter-03__text">button 03</button>
+      </a>
+    </div>
+    <!-- filter woter03-->
+    <svg>
+      <filter id="filterWoter03">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" />
+        <feColorMatrix
+          values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 50 -10"
+        />
+      </filter>
+    </svg>
+    <!-- filter woter05-->
+    <div>
+      <h3>#05 (create-700 / remove-2000 // stdDeviation="13")</h3>
+      <p>background-color: #f19410;//#c8b8b8;</p>
+      <h4>Romanenko Yuliia</h4>
+      <a href="#" class="woter05__box">
+        <div id="woter05"></div>
+        <span>button-05</span>
+
+        <svg>
+          <filter id="filter05">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="13" />
+            <feColorMatrix
+              values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 50 -10"
+            />
+          </filter>
+        </svg>
+      </a>
+    </div>
+    <!-- filter woter06-->
+    <div>
+      <h3>
+        #05 (create-2000 / remove-5000 // stdDeviation="11"//animation: 6s)
+      </h3>
+      <a href="#" class="woter06__wrapper">
+        <div id="woter06">ffffffff</div>
+        <span>button #6</span>
+      </a>
+      <!-- svg06-->
+      <svg>
+        <filter id="filter06">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+          <feColorMatrix
+            values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 50 -10"
+          />
+        </filter>
+      </svg>
+    </div>
+  </div>
+  <svg>
+    <filter id="filterWoter02">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+      <feColorMatrix
+        values="
+               1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 40 -10"
+      />
+    </filter>
+  </svg>
+  <script>
+    let woter = document.getElementById('woter');
+
+    function createParticles() {
+      let particle = document.createElement('div');
+      particle.classList.add('particle');
+      //Math.random()- повертає випадкове число від 0 (включно) до 1 (виключно)
+      //  Math.PI приблизно дорівнює 3.14159
+      // 2 * Math.PI — це повне коло в радіанах, тобто 360 градусів.
+      let angle = Math.random() * 2 * Math.PI;
+      // Math.random() * 2 * Math.PI генерує випадкове число від 0 до 2π, тобто випадковий кут у радіанах десь всередині повного кола.
+      //       2.------------------------------------- Math.random() * 100
+      // Множимо випадкове число на 100 → отримуємо число від 0 до 99.999….
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.setProperty('--dx', dx);
+      particle.style.setProperty('--dy', dy);
+
+      particle.style.left = '50%';
+      particle.style.top = '50%';
+      particle.style.transform = 'translate(-50%, -50%)';
+
+      woter.appendChild(particle);
+      setTimeout(() => {
+        particle.remove();
+      }, 2000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles();
+      }
+    }, 700);
+    //-------------------- woter 02
+    const woter02 = document.getElementById('woter02');
+
+    function createParticles02() {
+      const particles02 = document.createElement('div');
+
+      particles02.classList.add('particle02');
+
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+      let dxq = Math.cos(angle) * distance + 'px';
+      let dyq = Math.sin(angle) * distance + 'px';
+
+      particles02.style.position = 'absolute';
+
+      particles02.style.left = '50%';
+      particles02.style.top = '50%';
+      particles02.style.transform = 'translate(-50%, -50%)';
+      particles02.style.setProperty('--dxq', dxq);
+      particles02.style.setProperty('--dyq', dyq);
+
+      particles02.style.animation = 'go  3s linear forwards';
+
+      woter02.appendChild(particles02);
+      setTimeout(() => {
+        particles02.remove();
+      }, 2000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles02();
+      }
+    }, 100);
+    //-------------------- woter 03
+    const woter03 = document.getElementById('woter03');
+
+    function createParticles03() {
+      const particle03 = document.createElement('div');
+      particle03.classList.add('particle03');
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle03.style.setProperty('--w3x', dx);
+      particle03.style.setProperty('--w3y', dy);
+
+      particle03.style.left = '50%';
+      particle03.style.top = '50%';
+
+      woter03.appendChild(particle03);
+      setTimeout(() => {
+        particle03.remove();
+      }, 3000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles03();
+      }
+    }, 50);
+    //--------woter05
+    const woter05 = document.getElementById('woter05');
+
+    function createParticles05() {
+      let particle = document.createElement('div');
+      particle.classList.add('particle05');
+
+      //--
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.top = '50%';
+      particle.style.left = '50%';
+
+      particle.style.setProperty('--wdx', dx);
+      particle.style.setProperty('--wdy', dy);
+
+      woter05.appendChild(particle);
+      setTimeout(() => {
+        particle.remove();
+      }, 2000);
+    }
+    //--
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles05();
+      }
+    }, 700);
+    //--------woter06
+    const woter06 = document.getElementById('woter06');
+
+    function createParticles06() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle06');
+
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.setProperty('--dx06', dx);
+      particle.style.setProperty('--dy06', dy);
+
+      woter06.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 5000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 5; i++) {
+        createParticles06();
+      }
+    }, 2000);
+  </script>
+</section>
+<!--
+<section class="btn-woter">
+  <div class="btn-woter_container">
+    <h2>btn-woter</h2>
+    <a href="#" class="woter-btn_link-box">
+      <div class="btn-woter_body" id="woter">
+        <span>Woter</span>
+      </div>
+    </a>
+  </div>
+  <div class="btn-woter_container01"><p>a>div>span</p></div>
+  <script>
+    let woter = document.getElementById('woter');
+
+    function createParticles() {
+      let particles = document.createElement('div');
+      particles.classList.add('particles');
+
+      // Случайный угол и расстояние
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      // Позиционирование частицы в центре блока woter
+      particles.style.position = 'absolute';
+      particles.style.left = '50%';
+      particles.style.top = '50%';
+      particles.style.transform = 'translate(-50%, -50%)';
+
+      // Применение случайного движения
+      particles.style.animation = `moveParticle 2s forwards`;
+
+      // Добавление частицы в блок woter
+      woter.appendChild(particles);
+
+      // Удаление частицы через 2 секунды после анимации
+      setTimeout(() => {
+        particles.remove();
+      }, 2000);
+    }
+
+    // Анимация (движение частицы наружу)
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes moveParticle {
+        0% { transform: translate(-50%, -50%); }
+        100% { transform: translate(${dx}, ${dy}); }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Запуск создания частиц каждые 100 мс
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        createParticles();
+      }
+    }, 100);
+  </script>
+</section> -->

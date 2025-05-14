@@ -1,0 +1,96 @@
+.conteiner-swiper {
+  display: flex;
+  // flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-card img {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+.content-card h2 {
+  font-size: clamp(2rem, 1vw, 3rem);
+  font-weight: 500;
+  //запрет выделения текста
+  user-select: none;
+  color: rgb(220, 191, 153);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e1e1;
+}
+
+.swiper-slide {
+  max-width: 700px;
+  height: 480px;
+  border-radius: 15px;
+  border: 1px solid #fafafa;
+  margin: 20px 0 40px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 10px rgba(0, 0, 0, 0.5),
+    inset 0 2px 2px rgba(225, 255, 255, 0.2);
+  cursor: grab;
+  background-color: #9d8787;
+}
+.content-card {
+  position: relative;
+  display: grid;
+  grid-auto-flow: dense;
+
+  grid-template-rows: 2fr 1fr 3fr 1fr;
+  gap: 10px;
+  height: 100%;
+  padding: 16px;
+  border: 10px solid #e5caca;
+  transition:
+    transform 1npm inherits ease-in-out,
+    opacity 0.5s linear;
+}
+.content-card:hover {
+  transform: scale(1);
+  transition:
+    transform 3s ease-in-out,
+    opacity 0.5s linear;
+}
+.swiper-wrapper {
+  transition:
+    transform 1s ease-in-out,
+    opacity 300ms ease-in-out;
+}
+.swiper-wrapper:hover > :not(:hover) {
+  transform: scale(0.7);
+  opacity: 0.5;
+  transition:
+    transform 1s ease-in-out,
+    opacity 300ms ease-in-out;
+}
+
+.content-card img {
+  aspect-ratio: 3/2;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.content-card p {
+}
+.content-card h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  padding-top: 10px;
+}
+.bnt-swiper02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfc8c8;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #dfc8c8;
+  transition: all 0.3s;
+}
+.bnt-swiper02:is(:hover, :focus-visible) {
+  transform: scale(0.97);
+}

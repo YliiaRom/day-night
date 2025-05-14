@@ -1,0 +1,91 @@
+/* hypothenuse of --ui-notch-amount */
+.form-tree {
+  position: relative;
+  height: 100vh;
+  padding: 30px 15px;
+  margin: 0 auto;
+  background-color: #3c181a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.form-tree__form01 {
+  position: relative;
+  height: auto;
+  max-width: 700px;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 20px 10px;
+  border: 2px solid #f94812;
+  color: #9c3230;
+  z-index: 3;
+  -webkit-clip-path: polygon(0 0, 98% 0, 90% 100%, 0% 100%);
+          clip-path: polygon(0 0, 98% 0, 90% 100%, 0% 100%);
+  -webkit-box-shadow: 0 0 30px 10px #8a2101;
+          box-shadow: 0 0 30px 10px #8a2101;
+  border-radius: 0 0px 999px 0px;
+  overflow: hidden;
+}
+.form-tree__form01::before, .form-tree__form01::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  background-color: #295459;
+  background: linear-gradient(300deg, transparent 10%, #0c1c1e 100%);
+  -webkit-transform: translateY(-80px);
+      -ms-transform: translateY(-80px);
+          transform: translateY(-80px);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  z-index: -5;
+}
+.form-tree__form01::after {
+  -webkit-transform: translateX(230px) translateY(-120px);
+      -ms-transform: translateX(230px) translateY(-120px);
+          transform: translateX(230px) translateY(-120px);
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+  background: linear-gradient(300deg, transparent 10%, #fafefe 100%);
+}
+.form-tree__form01__title {
+  color: #f8885f;
+  text-align: center;
+}
+.form-tree__form01__input {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.form01__input {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 12px;
+  background-color: #a4efef;
+  border: 3px solid #f8885f;
+}
+
+.form01__btn-submit {
+  position: relative;
+  padding: 10px 20px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#792101), color-stop(50%, #ff4601), color-stop(100%, #f74201), color-stop(120%, #fdb297));
+  background: linear-gradient(0deg, #792101 0%, #ff4601 50%, #f74201 100%, #fdb297 120%);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 7px 5px 1px #2a0606;
+          box-shadow: 0px 7px 5px 1px #2a0606;
+  border: 3px solid #f8885f;
+  color: #a4efef;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}

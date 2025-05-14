@@ -1,0 +1,47 @@
+.about-me-swiper-container {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-me-skills {
+  width: 260px;
+  height: 130px;
+}
+
+.swiper-content-wrap {
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  border: 1px solid #0f0;
+  border-radius: 50%;
+  transition: background-color 250ms linear;
+  align-items: center;
+}
+
+.swiper-content-wrap-active,
+.swiper-content-wrap:active {
+  background-color: #696903 !important;
+  outline: transparent;
+  border: none;
+}
+
+.swiper-arrow-svg {
+color: $black;
+}
+
+.swipe-text {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #999;
+}
+
+.about-me-swiper-container {
+  margin-bottom: 64px;
+}
