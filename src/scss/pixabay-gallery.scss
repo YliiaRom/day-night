@@ -1,0 +1,29 @@
+
+.gallery-item {
+  max-width: 300px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.img-wrap {
+  max-width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.img-wrap {
+width: 100%;
+height: 100%;
+max-width: 300px;
+object-fit: cover;
+}
+.gallery-item__contents-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.gallery-item__contents-list .img-content {
+max-width: 50px;
+padding: 5px;
+}

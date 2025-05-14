@@ -3,4 +3,8 @@ import './theme';
 import './switch3d-bcc';
 import './cover-animation';
 import './btn-chenge';
+import './swiper02';
 import './swiper';
+import './form';
+import './pixabay-api';
+import './render-function';

@@ -14,7 +14,7 @@
 //     entries.forEach(entry => {
 //       if (entry.isIntersecting) {
 //         coversPictures.forEach(el => {
-//           el.classList.add('covers-animation'); // Добавляем класс анимации
+//           el.classList.add('cover-run'); // Добавляем класс анимации
 //         });
 //         observer.disconnect(); // Отключаем наблюдатель после добавления анимации
 //       }
@@ -23,9 +23,3 @@
 
 //   observer.observe(coverSection);
 // });
-// const hiddenTitle = () => {
-//   const coversTitleHidden = document.querySelector('.covers h2');
-  
-// console.dir(coversTitleHidden);
-// }
-// hiddenTitle();

@@ -1,0 +1,203 @@
+<section class="tilt">
+  <div>
+    <h2>Tilt</h2>
+    <p>Card= transform-style: preserve-3d;</p>
+    <p>
+      card.style.transform = `perspective(1000px)rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)`;
+    </p>
+    <div class="tilt__wrapper">
+      <div class="tilt__01">
+        <div class="tilt-01__card">
+          <img
+            class="tilt-img"
+            src="../img/portfolio-collage/first-screen1.webp"
+            alt="picture"
+          />
+        </div>
+        <p>background-position: center;</p>
+        <p>
+          js = let bgX = (x / rect.width) * 50 + 50; <br />
+          card.style.backgroundPositionX = `${bgX}%`;
+        </p>
+        <p>card.style.backgroundPositionX = ``;</p>
+        <p>
+          background-position: center; <br />
+          background-size: cover;
+        </p>
+      </div>
+      <!-- ----------------tilt#2 -->
+      <div class="tilt02_wrap">
+        <div class="tilt-02">
+          <img
+            class="tilt-02_img"
+            src="../img/portfolio-collage/rectangle5.webp"
+            alt="picture"
+          />
+        </div>
+      </div>
+      <!-- ----------------tilt#3 -->
+      <div class="tilt03">
+        <div class="tilt03_box">
+          <img src="../img/logo.svg" alt="pictures" class="tilt03_img" />
+        </div>
+
+        <div class="tilt03_btn-wrapper">
+          <h3>
+            animation: 8s/ stdDeviation="10" ; setInterval: 3000 / remove: 5000/
+          </h3>
+          <a href="#" id="tilt03_btn-body">
+            <div class="tilt03_btn" id="tilt03btn"></div>
+            <span class="tilt03_btn-text">button -tilt#3</span>
+          </a>
+          <!-- svg --#3-->
+          <svg>
+            <filter id="filter03">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+              <feColorMatrix
+                values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 50 -10"
+              />
+            </filter>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //--#1
+    let card = document.querySelector('.tilt-01__card');
+    card.addEventListener('mousemove', e => {
+      let rect = card.getBoundingClientRect();
+
+      // .getBoundingClientRect() повертає об`єкт, що містить розміри елемента/ його положення відносно вікна перегляду, тобто що бачить користувач у браузер
+      //       rect.top — відстань від верхнього краю вікна до верхнього краю елемента.
+
+      // rect.left — відстань від лівого краю вікна до лівого краю елемента.
+
+      // rect.right — відстань від лівого краю вікна до правого краю елемента.
+
+      // rect.bottom — відстань від верхнього краю вікна до нижнього краю елемента.
+
+      // rect.width — ширина елемента.
+
+      // rect.height — висота елемента.
+      let x = e.clientX - rect.left - rect.width / 2;
+      //на скільки пікселів курсор зміщений від центру елемента по осі X.
+      //--------------------------------
+      //e.clientX-координата X миші відносно вікна браузера.
+      //--
+      //e.clientX - rect.left- наскільки вправо від лівого краю елемента знаходиться курсор.
+      //--
+      //rect.width / 2-половина ширини елемента
+      //обчислити позицію відносно центру елемента, а не його лівого краю.
+      //===============================
+      //       Якщо x буде:
+      // від'ємне → курсор лівіше центру,
+      // додатне → правіше центру.
+
+      let y = e.clientY - rect.top - rect.height / 2;
+      //e.clientY - rect.top — позиція курсора всередині елемента по вертикалі.
+
+      //--------------------------------
+      //наклоняет  //влево/вправо.
+      // let rotateX = (y / (rect.width / 2)) * -30;
+      //наклоняет  /вверх ніз
+      //let rotateY = (x / (rect.height / 2)) * 30;
+      //-
+      // let rotateX = (y / rect.height) * -30;
+      // rotateX — це нахил вгору/вниз, тому його потрібно обчислювати відносно Y (вертикаль).
+      // let rotateY = (x / rect.width) * 30;
+
+      let rotateX = (x / rect.height) * -30;
+      //(x / rect.height) — это нормализация значения, т.е. деление положения мыши по оси X на высоту элемента. Это дает значение от 0 до 1, в зависимости от того, где на элементе находится мышь.
+      // влево/вправо.
+      //Умножаем на -30, чтобы повернуть элемент по оси X на максимальные углы от -30 до 30 градусов, когда мышь находится на одном из краев (вверх или вниз)
+      let rotateY = (y / rect.width) * -30;
+
+      //-30 -максимальные углы поворота./чтобы получить величину поворота.
+      //-30? Чтобы при движении мышки вправо элемент поворачивался влево (эффект наклона).
+      //width / 2, чтобы x = 0 (центр) давал 0 градусов, а края — ±30.
+      //---------------------------
+      card.style.transform = `perspective(1000px)rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      //---------------------------
+      let bgX = (x / rect.width) * 50 + 50;
+      card.style.backgroundPositionX = `${bgX}%`;
+      //и умножаем на 50, чтобы диапазон значения был от 0 до 50
+      //Добавляем 50, чтобы это значение лежало в пределах от 50 до 100.
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = `perspective(1000px)rotateX(0deg) rotateY(0deg)`;
+      card.style.backgroundPositionX = ``;
+      // фоновое изображение больше не будет двигаться по оси X, и его положение будет сброшено в исходное состояние.
+    });
+    //--#2
+    const card02 = document.querySelector('.tilt-02');
+    card02.addEventListener('mousemove', e => {
+      let rect = card02.getBoundingClientRect();
+      let x = e.clientX - rect.left - rect.width / 2;
+      let y = e.clientY - rect.top - rect.height / 2;
+      //--
+      let rotateX = (y / (rect.width / 2)) * 30;
+      let rotateY = (x / (rect.height / 2)) * -30;
+      //--frm
+      card02.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(50px)`;
+      let bgX = (x / rect.width) * 50 + 50;
+      card02.style.backgroundPositionX = `${bgX}%`;
+    });
+
+    card02.addEventListener('mouseleave', () => {
+      card02.style.transform = `rotateX(0deg) rotateY(0deg) translateZ(100px)`;
+    });
+    // ----------#3
+    const card03 = document.querySelector('.tilt03_box');
+
+    card03.addEventListener('mousemove', e => {
+      const rect = card03.getBoundingClientRect();
+
+      let x = e.clientX - rect.left - rect.width / 2;
+      let y = e.clientY - rect.top - rect.height / 2;
+
+      let rotateX = (y / (rect.width / 2)) * 30;
+      let rotateY = (x / (rect.height / 2)) * -30;
+
+      card03.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+      let bgX = (x / rect.width) * 50 + 50;
+      card03.style.backgroundPosition = `${bgX}%`;
+    });
+    card03.addEventListener('mouseleave', () => {
+      card03.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+      card03.style.backgroundPosition = ``;
+    });
+    //---btn#3
+    const tiltBtn03 = document.getElementById('tilt03btn');
+
+    function createParticles() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle03');
+
+      let angle = Math.random() * 2 * Math.PI;
+      let distance = 150 + Math.random() * 100;
+
+      let dx = Math.cos(angle) * distance + 'px';
+      let dy = Math.sin(angle) * distance + 'px';
+
+      particle.style.setProperty('--dx03', dx);
+      particle.style.setProperty('--dy03', dy);
+
+      tiltBtn03.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 5000);
+    }
+    setInterval(() => {
+      for (let i = 0; i < 2; i++) {
+        createParticles();
+      }
+    }, 3000);
+  </script>
+</section>

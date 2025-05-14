@@ -1,21 +1,6 @@
-@import "variables.scss";
-@import "switch-theme.scss";
-@import "header.scss";
-@import "switch3d.scss";
-@import "benefits.scss";
-@import "btn-woter.scss";
-@import "tilt3d.scss";
-@import "spline.scss";
-@import "portfolio-collage.scss";
-@import "07-covers.scss";
-@import "aubout-me-swiperjs.scss";
-@import "swiper02.scss";
-@import "form.scss";
-@import "pixabay-gallery.scss";
-@import "avatar.scss";
 @font-face {
-  font-family: "icons";
-  src: url("/fonts/icomoon.woff2") format("woff2");
+  font-family: 'icons';
+  src: url('../fonts/icomoon.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -23,7 +8,7 @@
 
 [class*="-icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons";
+  font-family: 'icons';
   speak: never;
   font-style: normal;
   font-weight: normal;

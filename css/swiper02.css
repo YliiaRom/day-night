@@ -1,0 +1,130 @@
+.conteiner-swiper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-card img {
+  width: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.content-card h2 {
+  font-size: clamp(2rem, 1vw, 3rem);
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: rgb(220, 191, 153);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e1e1;
+}
+
+.swiper-slide {
+  max-width: 700px;
+  height: 480px;
+  border-radius: 15px;
+  border: 1px solid #fafafa;
+  margin: 20px 0 40px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(225, 255, 255, 0.2);
+          box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(225, 255, 255, 0.2);
+  cursor: -webkit-grab;
+  cursor: grab;
+  background-color: #9d8787;
+}
+
+.content-card {
+  position: relative;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-rows: 2fr 1fr 3fr 1fr;
+  gap: 10px;
+  height: 100%;
+  padding: 16px;
+  border: 10px solid #e5caca;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 1npm inherits ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 1npm inherits ease-in-out;
+  transition: transform 1npm inherits ease-in-out, opacity 0.5s linear;
+  transition: transform 1npm inherits ease-in-out, opacity 0.5s linear, -webkit-transform 1npm inherits ease-in-out;
+}
+
+.content-card:hover {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 3s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 3s ease-in-out;
+  transition: transform 3s ease-in-out, opacity 0.5s linear;
+  transition: transform 3s ease-in-out, opacity 0.5s linear, -webkit-transform 3s ease-in-out;
+}
+
+.swiper-wrapper {
+  -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: opacity 300ms ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 1s ease-in-out, opacity 300ms ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.swiper-wrapper:hover > :not(:hover) {
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0.5;
+  -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: opacity 300ms ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 1s ease-in-out, opacity 300ms ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.content-card img {
+  aspect-ratio: 3/2;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content-card h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.bnt-swiper02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #dfc8c8;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px #dfc8c8;
+          box-shadow: 0 0 5px #dfc8c8;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.bnt-swiper02:is(:hover, :focus-visible) {
+  -webkit-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+          transform: scale(0.97);
+}

@@ -1,3 +1,4 @@
+
 :root {
   --bg-benefits-section: #1C1D20;
   --bg-svg-benefits-item: #0041E8;
@@ -28,11 +29,9 @@ background-color: var(--bg-benefits-section);
   gap: 22px;
 }
 .benefits-title {
-  // text-align: start;
-
   display: inline;
   font-weight: 600;
-  line-height: 1.5; /* 150% */
+  line-height: 1.5;
   letter-spacing: -0.32px;
   text-transform: uppercase;
   color: var(--col-benefits-title);
@@ -51,20 +50,18 @@ background-color: var(--bg-benefits-section);
 
 .benefits-item {
   max-width: 344px;
-  // max-height: 270px;
   padding: 24px;
 
 border-radius: 20px;
 
 background: linear-gradient(20deg, transparent 0%, transparent 50%, rgba(0, 65, 232, 0.7) 100%);
 box-shadow: -2px -3px 4px 0 #7b7979, 2px 3px 4px 0 #0d0430;
-
 background-color:var(--bg-benefits-item);
 }
+
 .benefits-icon-container {
   max-width: 48px;
   max-height: 48px;
-
   padding: 12px;
 
   display: flex;
@@ -89,7 +86,7 @@ box-shadow: -2px -2px 3px 0#f2f0f0, 2px 3px 4px 0#0d0430;
   font-size: 20px;
 
 font-weight: 600;
-line-height: 1.5; /* 150% */
+line-height: 1.5;
 letter-spacing: -0.4px;
 color: var(--col-benefits-item-title);
 margin: 0;
@@ -98,7 +95,7 @@ margin-bottom: 8px;
 
 .benefits-item-text p {
   font-weight: 500;
-  line-height:1.5; /* 150% */
+  line-height:1.5; 
   letter-spacing: -0.32px;
   color: var(--col-benefits-item-text);
   margin: 0;

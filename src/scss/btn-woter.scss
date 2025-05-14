@@ -1,0 +1,338 @@
+.btn-woter {
+  background-color: #999;
+  height: fit-content;
+}
+.btn-woter_container,
+.btn-woter_container01 {
+  max-width: 700px;
+  min-height: 500px;
+
+  border: 1px solid #fff;
+  margin: auto auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-woter_container01 {
+  flex-direction: column;
+  margin: auto auto;
+}
+//==
+.mainBox {
+  position: relative;
+}
+.woter-btn_link-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-woter_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//-------div
+.btn-woter_body {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  background: #f00;
+
+  border-radius: 10px;
+  transition: 0.5s;
+  filter: url(#svgFilter);
+}
+// ---------span
+.textSpan02,
+.btn-woter_body span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f00;
+  font-size: 1.5rem;
+  transition: 0.5s;
+  letter-spacing: 0.2em;
+  background: #111;
+  padding: 15px 35px;
+  border-radius: 20px;
+  z-index: 9999;
+}
+.textSpan02:hover,
+a:hover span {
+  color: #fff;
+  letter-spacing: 0.3em;
+  background: transparent;
+}
+// ---particle
+.particle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #f00;
+  border-radius: 50%;
+  pointer-events: none;
+
+  animation: animate 2s linear forwards;
+}
+@keyframes animate {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(0.5);
+  }
+}
+#svgWoterBox {
+  display: none;
+  // background: #19f73a;
+}
+//-------------woter02-----------
+.woter02-wrapper {
+  margin: 50px auto;
+}
+.btn-woter02_link,
+.woter02-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+//--box
+.woter02-box {
+  position: relative;
+  background-color: #422b2b;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  filter: url(#filterWoter02);
+}
+//--span
+.woter02-box span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03fdc7;
+  color: #8fa39f;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+}
+//--частиці
+.particle02 {
+  width: 20px;
+  height: 20px;
+
+  background: #f19410;
+
+  border-radius: 50%;
+  animation: go 3s linear forwards;
+}
+@keyframes go {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(var(--dxq), var(--dyq)) scale(0.5);
+  }
+}
+//---------------- woter-03
+.woter-03__box {
+  text-decoration: none;
+  color: #422b2b;
+}
+#woter03,
+.woter-03__box,
+#woter03 span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+#woter03 {
+  background-color: #e0e6f7;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  filter: url(#filterWoter03);
+}
+#woter03 span {
+  width: 100%;
+
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 10px;
+
+  background-color: #d0ecf7;
+}
+//particle03
+.particle03 {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #fefcfd;
+  border-radius: 50%;
+  transition: 0.5s;
+  animation: ss 3s linear forwards;
+}
+@keyframes ss {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(var(--w3x), var(--w3y)) scale(0.5);
+  }
+}
+//--
+.woter-03__text {
+  position: absolute;
+
+  top: 40%;
+  left: 0;
+  width: 100%;
+
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 10px;
+
+  background-color: #f0d3d3;
+  border: none;
+}
+// woter05
+.woter05__box,
+#woter05,
+.woter05__box span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.woter05__box {
+  position: relative;
+  text-decoration: none;
+  margin: 50px auto;
+}
+#woter05 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 200px;
+  height: 1.5rem;
+  background-color: #f19410;
+  border-radius: 20px;
+  padding: 10px 20px;
+  filter: url(#filter05);
+}
+.woter05__box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #dfcdcd25;
+  color: #03fdc7;
+  width: 200px;
+  font-weight: 900;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.3rem;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+//--particle
+.particle05 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #c8b8b8;
+  transition: 0.3s;
+  animation: p 3s linear forwards;
+}
+@keyframes p {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(90deg);
+  }
+  100% {
+    transform: translate(var(--wdx), var(--wdy)) scale(0.5);
+  }
+}
+//---------#6
+.woter06__wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 50px auto;
+  // transform: rotate(-10deg) skew(40deg);
+}
+.woter06__wrapper,
+#woter06,
+.woter06__wrapper span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//-div
+#woter06 {
+  background-color: #c0dafc;
+  width: 200px;
+  height: 1.5rem;
+  padding: 10px 15px;
+
+  filter: url(#filter06);
+}
+.woter06__wrapper span {
+  position: absolute;
+  // top: 0;
+  // left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fbfbfa;
+  width: 100%;
+
+  line-height: 1.5rem;
+  border-radius: 10px;
+  // transform: rotate(10deg) skew(-35deg);
+  background-color: #e0e6f742;
+  border: 1px solid #fff;
+  padding: 15px 15px;
+  box-shadow:
+    -1px -1px 2px #fff,
+    1px 1px 2px #01064d;
+}
+
+.particle06 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+
+  background-color: #e2eefa;
+  transition: 0.3s;
+  animation: go06 6s linear forwards;
+}
+@keyframes go06 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(var(--dx06), var(--dy06)) scale(0.5);
+  }
+}
